@@ -13,16 +13,16 @@ function filterData(search) {
   });
 }
 
-const readButtons = document.querySelectorAll(".btn");
+const bookImages = document.querySelectorAll(".card");
 
-readButtons.forEach((button) => {
-  button.addEventListener("mouseover", () => {
-    button.style.backgroundColor = "red";
-    button.style.color = "white";
+bookImages.forEach((image) => {
+  image.addEventListener("mouseover", () => {
+    image.style.transform = "scale(1.1)";
+    image.style.transition = "transform 0.3s ease";
   });
 
-  button.addEventListener("mouseout", () => {
-    button.style.backgroundColor = "";
-    button.style.color = "";
+  image.addEventListener("mouseout", () => {
+    image.style.transform = "scale(1)";
+    image.style.transition = "transform 0.3s ease";
   });
 });
